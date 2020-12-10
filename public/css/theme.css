@@ -46,6 +46,7 @@
 
 html {
   font-family: sans-serif;
+  overflow-x: hidden;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -454,7 +455,7 @@ h6, .h6 {
 }
 
 .display-4 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -7102,7 +7103,8 @@ button.bg-navy:focus {
 }
 
 .border-bottom {
-  border-bottom: 0.0625rem solid #e7eaf3 !important;
+  /* border-bottom: 0.0625rem solid #e7eaf3 !important; */
+  border-bottom: 3px solid #e7eaf3 !important;
 }
 
 .border-left {
@@ -12734,12 +12736,12 @@ a.text-navy:hover, a.text-navy:focus {
 
 .space-1,
 .space-top-1 {
-  padding-top: 2rem !important;
+  padding-top: 1rem !important;
 }
 
 .space-1,
 .space-bottom-1 {
-  padding-bottom: 2rem !important;
+  padding-bottom: .7rem !important;
 }
 
 .space-2,
@@ -12754,7 +12756,7 @@ a.text-navy:hover, a.text-navy:focus {
 
 .space-3,
 .space-top-3 {
-  padding-top: 8rem !important;
+  padding-top: 6.8rem !important;
 }
 
 .space-3,
@@ -21374,6 +21376,9 @@ label.btn {
   .step-md.step-centered {
     text-align: center;
   }
+  .step-md p{
+    text-align: left;
+  }
   .step-md.step-centered .step-item:last-child .step-icon::after {
     display: none;
   }
@@ -22682,7 +22687,9 @@ label.btn {
 }
 
 .max-w-13rem {
-  max-width: 6rem;
+  max-width: 15rem;
+  font-weight: bold;
+  font-size: 19px;
 }
 
 .max-w-15rem {
@@ -23905,6 +23912,92 @@ a:hover .text-hover-primary {
   }
 }
 
+.hero{
+    width: 80%;
+    height: 450px;
+    position: relative;
+    margin: 100px auto;
+    box-shadow: 3px 2px 3px rgb(197, 197, 197);
+}
+
+.btn-box{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    background: #bb2129;
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 7px;
+    margin-right: 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    position: absolute;
+    transform: translateX(110%);
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.content-left {
+    flex-basis: 90%;
+    /* width: 80% !important; */
+}
+
+.content-left p {
+    font-size: 17px;
+    padding: 30px 0;
+}
+
+.content-left a{
+    width: 150px;
+    padding: 8px 5px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #bb2129;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#content1{
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+/* #btn1{
+    color: #bb2129;
+} */
 /*------------------------------------
   File for your custom SCSS style
 ------------------------------------*/

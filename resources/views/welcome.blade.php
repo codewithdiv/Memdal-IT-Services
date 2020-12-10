@@ -1,273 +1,172 @@
-{{-- <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html> --}}
-
 @extends('layouts.index')
 
 @section('content')
     <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Hero Section -->
-    <div class="d-lg-flex position-relative">
-      <div class="container d-lg-flex align-items-lg-center space-top-2 space-lg-0 min-vh-lg-100">
-        <!-- Content -->
-        <div class="w-md-100">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="mb-5 mt-11">
-                <h1 class="display-4 mb-3">
-                  Turn your ideas into a
 
-                  <span class="text-primary text-highlight-warning">
-                    <span class="js-text-animation"></span>
-                  </span>
-                </h1>
-                <p class="lead">Front's feature-rich designed demo pages help you create the best possible product.</p>
-              </div>
+    <div class="position-relative border-bottom">
+      <!-- Hero Carousel Main -->
+      <div id="heroNav" class="js-slick-carousel slick slick-equal-height space-top-3"
+           data-hs-slick-carousel-options='{
+             "prevArrow": "<span class=\"fas fa-arrow-left d-none d-md-inline-block slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4\"></span>",
+             "nextArrow": "<span class=\"fas fa-arrow-right d-none d-md-inline-block slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4\"></span>",
+             "infinite": true,
+             "autoplay": true,
+             "autoplaySpeed": 10000,
+             "adaptiveHeight": true,
+             "counterSelector": "#slickCounter",
+             "counterDivider": "/",
+             "counterClassMap": {
+               "current": "slick-counter-current",
+               "total": "slick-counter-total",
+               "divider": "slick-counter-divider"
+             },
+             "dots": true,
+             "dotsClass": "slick-pagination slick-pagination-white d-md-none container position-absolute bottom-0 right-0 left-0 justify-content-start mb-6 pl-3 mx-auto",
+             "asNavFor": "#heroNavThumb"
+           }'>
+        <div class="js-slide gradient-y-overlay-sm-dark bg-img-hero" style="background-image: url({{ asset('img/1920x800/img2.jpg') }});">
+          <!-- Slide #1 -->
+          <div class="container d-md-flex align-items-md-center vh-md-70 space-top-4 space-bottom-3 space-md-0">
+            <div class="w-80 w-lg-50">
+              {{-- <span class="d-block h3 text-white mb-2"
+                    data-hs-slick-carousel-animation="fadeInUp">
 
-              <a class="btn btn-color btn-wide transition-3d-hover"
-                href="https://htmlstream.com/preview/front-v3.2.2/html/pages/login-simple.html">Get Started</a>
-              <a class="btn btn-link btn-wide" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </span> --}}
+              <h1 class="text-white display-4 mb-0"
+                  data-hs-slick-carousel-animation="fadeInUp"
+                  data-hs-slick-carousel-animation-delay="200">
+                 SOFTWARE CONSULTING AND DEVELOPMENT FOR YOUR DIGITAL SUCCESS.
+              </h1>
             </div>
           </div>
+          <!-- End Slide #1 -->
         </div>
-        <!-- End Content -->
 
-        <!-- SVG Shape -->
-        <figure class="col-lg-7 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
-          style="margin-top: 6.75rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
-            <path fill="#F9FBFF" d="M565.5,957.4c81.1-7.4,155.5-49.3,202.4-115.7C840,739.8,857,570,510.7,348.3C-35.5-1.5-4.2,340.3,2.7,389
-              c0.7,4.7,1.2,9.5,1.7,14.2l29.3,321c14,154.2,150.6,267.8,304.9,253.8L565.5,957.4z" />
-            <defs>
-              <path id="mainHeroSVG1"
-                d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z" />
-            </defs>
-            <clipPath id="mainHeroSVG2">
-              <use xlink:href="#mainHeroSVG1" />
-            </clipPath>
-            <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
-              <image width="750" height="750" xlink:href="{{ asset('/img/750x750/img2.jpg') }}"
-                transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
-            </g>
-          </svg>
-        </figure>
-        <!-- End SVG Shape -->
+        <div class="js-slide gradient-y-overlay-sm-dark bg-img-hero" style="background-image: url({{ asset('img/1920x800/img3.jpg') }});">
+          <!-- Slide #2 -->
+          <div class="container d-md-flex align-items-md-center vh-md-70 space-top-4 space-bottom-3 space-md-0">
+            <div class="w-80 w-lg-50">
+              {{-- <span class="d-block h3 text-white mb-2"
+                    data-hs-slick-carousel-animation="fadeInUp">
+                It is an
+              </span> --}}
+              <h2 class="text-white display-4 mb-0"
+                  data-hs-slick-carousel-animation="fadeInUp"
+                  data-hs-slick-carousel-animation-delay="200">
+                 {{-- Our Experienced developers can deliver great products which will exceed your expectations. --}}
+                 Are you planing to develop a software, we have proven expertise in the area of software development.
+              </h2>
+            </div>
+          </div>
+          <!-- End Slide #2 -->
+        </div>
       </div>
+      <!-- End Hero Carousel Main -->
+
+      <!-- Slick Paging -->
+      <div class="container position-relative">
+        <div id="slickCounter" class="slick-counter"></div>
+      </div>
+      <!-- End Slick Paging -->
+
+      <!-- Hero Carousel Secondary -->
+      <div id="heroNavThumb" class="js-slick-carousel slick"
+           data-hs-slick-carousel-options='{
+             "infinite": true,
+             "autoplay": true,
+             "autoplaySpeed": 10000,
+             "isThumbs": true,
+             "asNavFor": "#heroNav"
+           }'>
+        <div class="js-slide">
+          <!-- Slide #1 -->
+          <div class="d-flex align-items-center bg-white position-relative vh-md-30">
+            <div class="container space-2">
+              <div class="row">
+                <div class="col-md-4">
+                  <h3 class="text-muted">
+                    <span class="d-block font-weight-bold">01.</span>
+                    <span class="d-block text-primary">Memdal IT Services</span>
+                  </h3>
+                  <p class="mb-0">We transform businesses with powerful and adaptable digital solutions that satisfy the needs of today and unlock the opportunities of tomorrow..</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 d-none d-md-inline-block bg-primary position-absolute top-0 right-0 bottom-0">
+              <div class="content-centered-y p-7">
+                <a class="btn btn-color btn-wide transition-3d-hover"
+                href="https://htmlstream.com/preview/front-v3.2.2/html/pages/login-simple.html">Get Started</a>
+              <a class="btn btn-link btn-wide" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Slide #1 -->
+        </div>
+
+        <div class="js-slide">
+          <!-- Slide #2 -->
+          <div class="d-flex align-items-center bg-white position-relative vh-md-30">
+            <div class="container space-2">
+              <div class="row">
+                <div class="col-md-4">
+                  <h3 class="text-muted">
+                    <span class="d-block font-weight-bold">02.</span>
+                    <span class="d-block text-navy">Memdal IT Services</span>
+                  </h3>
+                  <p class="mb-0">Memdal IT Services is focused on developing and delivering products that drive growth and convert leads..</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 d-none d-md-inline-block bg-primary position-absolute top-0 right-0 bottom-0">
+              <div class="content-centered-y p-7">
+                <a class="btn btn-color btn-wide transition-3d-hover"
+                href="https://htmlstream.com/preview/front-v3.2.2/html/pages/login-simple.html">Get Started</a>
+              <a class="btn btn-link btn-wide" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Slide #2 -->
+        </div>
+      </div>
+      <!-- End Hero Carousel Secondary -->
     </div>
-    <!-- End Hero Section -->
 
-    <!-- Articles Section -->
-    <div class="container space-2 space-top-xl-3 space-bottom-lg-3">
-      <!-- Title -->
-      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-        <h2>Learn to develop sites with components and design systems</h2>
-      </div>
-      <!-- End Title -->
-
-      <div class="row mx-n2 mx-lg-n3">
-        <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0" data-aos="fade-up">
-          <!-- Card -->
-          <a class="card bg-primary text-left h-100 transition-3d-hover"
-            href="https://htmlstream.com/preview/front-v3.2.2/documentation/index.html">
-            <div class="card-body">
-              <div class="mb-5">
-                <h3 class="text-white">Documentation</h3>
-                <p class="text-white">Discover how to build and maintain coding systems using our documentation.</p>
-              </div>
-              <img class="img-fluid w-100"
-                src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/illustrations/docs-frame.svg"
-                alt="Image Description">
+    <div class="hero">
+        <div class="container">
+            <div class="btn-box">
+                <button id="btn1" onclick="openHTML()">Software Development</button>
+                <button id="btn2" onclick="openCSS()">Web Development</button>
+                <button id="btn3" onclick="openJS()">IT Consulting</button>
             </div>
-            <div class="card-footer border-0 bg-transparent pt-0">
-              <span class="font-size-1 text-white font-weight-bold">Learn more <i
-                  class="fas fa-angle-right fa-sm ml-1"></i></span>
+            <div id="content1" class="content">
+                <div class="content-left">
+                    <h2>Software Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque fuga ratione necessitatibus quod molestiae neque quaerat soluta veritatis asperiores ipsum impedit error quam, ducimus maxime aut tenetur accusamus doloribus labore.</p>
+                    <a href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm"></i></a>
+                </div>
+                <div class="content-rigt"></div>
             </div>
-          </a>
-          <!-- End Card -->
+            <div id="content2" class="content">
+                <div class="content-left">
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque fuga ratione necessitatibus quod molestiae neque quaerat soluta veritatis asperiores ipsum impedit error quam, ducimus maxime aut tenetur accusamus doloribus labore.</p>
+                    <a href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm"></i></a>
+                </div>
+                <div class="content-rigt"></div>
+            </div>
+            <div id="content3" class="content">
+                <div class="content-left">
+                    <h2>IT Consulting</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque fuga ratione necessitatibus quod molestiae neque quaerat soluta veritatis asperiores ipsum impedit error quam, ducimus maxime aut tenetur accusamus doloribus labore.</p>
+                    <a href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm"></i></a>
+                </div>
+                <div class="content-rigt"></div>
+            </div>
         </div>
-
-        <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="150">
-          <!-- Card -->
-          <a class="card bg-navy text-left h-100 transition-3d-hover"
-            href="https://htmlstream.com/preview/front-v3.2.2/snippets/index.html">
-            <div class="card-body">
-              <div class="mb-5">
-                <h3 class="text-white">Snippets</h3>
-                <p class="text-white">Start browsing our snippets pages with copy-to-clipboard snippets to match
-                  Bootstrap's level of quality.</p>
-              </div>
-              <img class="img-fluid w-100"
-                src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/illustrations/snippets-frame.svg"
-                alt="Image Description">
-            </div>
-            <div class="card-footer border-0 bg-transparent pt-0">
-              <span class="font-size-1 text-white font-weight-bold">Start building <i
-                  class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-
-        <div class="col-sm-6 col-lg-4 px-2 px-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <!-- Card -->
-          <a class="js-go-to card bg-warning text-left h-100 transition-3d-hover" href="javascript:;"
-            data-hs-go-to-options='{
-              "targetSelector": "#demoExamplesSection",
-              "offsetTop": 0,
-              "position": null,
-              "animationIn": false,
-              "animationOut": false
-             }'>
-            <div class="card-body">
-              <div class="mb-5">
-                <h3 class="text-white">Layout options</h3>
-                <p class="text-white">Apart from 70+ HTML-pages, the theme comes with 3 ready-to-use and stand-alone
-                  demo options.</p>
-              </div>
-              <img class="img-fluid w-100"
-                src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/illustrations/layouts-frame.svg"
-                alt="Image Description">
-            </div>
-            <div class="card-footer border-0 bg-transparent pt-0">
-              <span class="font-size-1 text-white font-weight-bold">View examples <i
-                  class="fas fa-angle-right fa-sm ml-1"></i></span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-      </div>
     </div>
-    <!-- End Articles Section -->
 
     <!-- Testimonials Section -->
     <div class="bg-light rounded mx-3 mx-md-11">
@@ -346,4 +245,258 @@
       </div>
     </div>
     <!-- End Testimonials Section -->
+
+    <!-- Features Section -->
+    <div class="bg-navy rounded mx-3 mx-xl-10" style="background-image: url(https://htmlstream.com/preview/front-v3.2.2/assets/svg/components/abstract-shapes-20.svg);">
+      <div class="container-xl container-fluid space-1 space-md-2 px-4 px-md-8 px-lg-10">
+        <div class="px-3">
+          <!-- Title -->
+          <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h1 class="text-white">Explore Our Services</h1>
+          </div>
+          <!-- End Title -->
+
+          <!-- Slick Carousel -->
+          <div class="js-slick-carousel slick slick-equal-height ie-slick-equal-height slick-gutters-3"
+              data-hs-slick-carousel-options='{
+                 "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-primary-white slick-arrow-left slick-arrow-centered-y shadow-soft rounded-circle ml-n2\"></span>",
+                 "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-n2\"></span>",
+                 "slidesToShow": 2,
+                 "infinite": true,
+                 "dots": true,
+                 "dotsClass": "slick-pagination slick-pagination-white d-none mt-5",
+                 "responsive": [{
+                   "breakpoint": 992,
+                   "settings": {
+                     "slidesToShow": 2
+                     }
+                   }, {
+                   "breakpoint": 768,
+                   "settings": {
+                     "slidesToShow": 1
+                     }
+                   }, {
+                   "breakpoint": 554,
+                   "settings": {
+                     "slidesToShow": 1
+                   }
+                 }]
+               }'>
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/480x320/img7.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    {{-- <img class="img-fluid" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/airbnb-original.svg" alt="Logo"> --}}
+                    Software Development
+                  </div>
+                  <p class="mb-0">The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/480x320/img7.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    {{-- <img class="img-fluid" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/airbnb-original.svg" alt="Logo"> --}}
+                    UI / UX Design
+                  </div>
+                  <p class="mb-0">User experience and user interface design for all types of websites, SaaS, and web/mobile apps. We combine the latest UI/UX trends with our customers’ individual goals and needs to deliver intuitive, vibrant, and impactful designs that power up businesses.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/480x320/img6.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    IT Consulting
+                  </div>
+                  <p class="mb-0">Our experts can help to develop and implement an effective IT strategy, assist in smooth digital transformation and system integration as well as advise on improvements to your digital customer experience..</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/480x320/img14.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    Web Development
+                  </div>
+                  <p class="mb-0">Memdal is a professional web development which offers responsive website design services. Providing business website design and development services in Nigeria</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/480x320/img12.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    Branding and Logo Design
+                  </div>
+                  <p class="mb-0">Branding and Logo Design has never been so easy and fun. Choose us and we can help amplify the brands reach. We are one of the best branding and Logo designing company in Nigeria. Contact us today for a free quotation.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('img/mockups/seo.jpg') }}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    Search Engine Optimization
+                  </div>
+                  <p class="mb-0">Get your website optimized with award winning SEO Experts, with over 6 years experience we are ready to make your website rank NO 1 on the web.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+          </div>
+          <!-- End Slick Carousel -->
+        </div>
+      </div>
+    </div>
+    <!-- End Features Section -->
+
+    <!-- Clients Section -->
+    <div class="container space-2 space-bottom-lg-3">
+        <h2 class="mb-5">TECHNOLOGIES WE USE</h2>
+        <div class="js-slick-carousel slick"
+           data-hs-slick-carousel-options='{
+             "slidesToShow": 5,
+             "autoplay": true,
+             "autoplaySpeed": 5000,
+             "infinite": true,
+             "responsive": [{
+               "breakpoint": 1200,
+               "settings": {
+                 "slidesToShow": 4
+               }
+             }, {
+               "breakpoint": 992,
+               "settings": {
+                 "slidesToShow": 4
+               }
+             }, {
+               "breakpoint": 768,
+               "settings": {
+                 "slidesToShow": 3
+               }
+             }, {
+               "breakpoint": 576,
+               "settings": {
+                 "slidesToShow": 3
+               }
+             }]
+           }'>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/kaplan.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/hubspot.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/stripe.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/slack.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/airbnb.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/spotify.svg" alt="Image Description">
+        </div>
+        <div class="js-slide">
+          <img class="max-w-11rem max-w-md-13rem mx-auto" src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/clients-logo/weebly.svg" alt="Image Description">
+        </div>
+      </div>
+    </div>
+    <!-- End Clients Section -->
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        var btn3 = document.getElementById("btn3")
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(120%)";
+            content3.style.transform = "translateX(120%)";
+            btn1.style.color = "#fff";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+            btn1.style.background = "#ff000d";
+            btn2.style.background = "transparent";
+            btn3.style.background = "transparent";
+            content1.style.transitionDelay = "0.3s"
+            content2.style.transitionDelay = "0s"
+            content3.style.transitionDelay = "0s"
+        }
+        function openCSS(){
+            content1.style.transform = "translateX(120%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(120%)";
+            btn2.style.color = "#fff";
+            btn1.style.color = "#000";
+            btn3.style.color = "#000";
+            btn2.style.background = "#ff000d";
+            btn1.style.background = "transparent";
+            btn3.style.background = "transparent";
+            content2.style.transitionDelay = "0.3s"
+            content1.style.transitionDelay = "0s"
+            content3.style.transitionDelay = "0s"
+        }
+        function openJS(){
+            content1.style.transform = "translateX(120%)";
+            content2.style.transform = "translateX(120%)";
+            content3.style.transform = "translateX(0)";
+            btn3.style.color = "#fff";
+            btn2.style.color = "#000";
+            btn1.style.color = "#000";
+            btn3.style.background = "#ff000d";
+            btn2.style.background = "transparent";
+            btn1.style.background = "transparent";
+            content3.style.transitionDelay = "0.3s"
+            content2.style.transitionDelay = "0s"
+            content1.style.transitionDelay = "0s"
+        }
+    </script>
 @endsection

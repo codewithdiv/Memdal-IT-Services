@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="{{ asset('vendor/dzsparallaxer/dzsparallaxer.css') }}">
   <link rel="stylesheet" href="{{ asset('vendor/cubeportfolio/css/cubeportfolio.min.css') }}">
   <link rel="stylesheet" href="{{ asset('vendor/aos/dist/aos.css') }}">
+  <link rel="stylesheet" href="{{ asset('vendor/slick-carousel/slick/slick.css') }}">
 
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
@@ -36,121 +37,7 @@
             "fixEffect": "slide"
           }'>
     <!-- Search -->
-    <div id="searchPushTop" class="search-push-top">
-      <div class="container position-relative">
-        <div class="search-push-top-content pt-3">
-          <!-- Close Button -->
-          <div class="search-push-top-close-btn">
-            <div class="hs-unfold">
-              <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary mt-2 mr-2" href="javascript:;"
-                data-hs-unfold-options='{
-                  "target": "#searchPushTop",
-                  "type": "jquery-slide",
-                  "contentSelector": ".search-push-top"
-                 }'>
-                <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor"
-                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <!-- End Close Button -->
-
-          <!-- Input -->
-          <form class="input-group">
-            <input type="search" class="form-control" placeholder="Search Front" aria-label="Search Front">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-color">Search</button>
-            </div>
-          </form>
-          <!-- End Input -->
-
-          <!-- Content for the search input dropdown -->
-          <div class="row d-none d-md-flex mt-7">
-            <div class="col-sm-6">
-              <span class="h5">Quick Links</span>
-
-              <div class="row">
-                <!-- Nav Link -->
-                <div class="col-6">
-                  <div class="nav nav-sm nav-x-0 flex-column">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results List
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results Grid
-                    </a>
-                    <a class="nav-link" href="/aboutmemdal">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      About
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Services
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Invoice
-                    </a>
-                  </div>
-                </div>
-                <!-- End Nav Link -->
-
-                <!-- Nav Link -->
-                <div class="col-6">
-                  <div class="nav nav-sm nav-x-0 flex-column">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Profile
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      User Contacts
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Reviews
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Settings
-                    </a>
-                  </div>
-                </div>
-                <!-- End Nav Link -->
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <!-- Banner -->
-              <div class="rounded search-push-top-banner">
-                <div class="d-flex align-items-center">
-                  <div class="search-push-top-banner-container">
-                    <img class="img-fluid search-push-top-banner-img" src="{{ asset('img/mockups/img3.png') }}"
-                      alt="Image Description">
-                    <img class="img-fluid search-push-top-banner-img" src="{{ asset('img/mockups/img2.png') }}"
-                      alt="Image Description">
-                  </div>
-
-                  <div>
-                    <div class="mb-4">
-                      <span class="h5">Featured Item</span>
-                      <p>Create astonishing web sites and pages.</p>
-                    </div>
-                    <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:;">Apply Now <i
-                        class="fas fa-angle-right fa-sm ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Banner -->
-            </div>
-          </div>
-          <!-- End Content -->
-        </div>
-      </div>
+    <div id="searchPushTop" >
     </div>
     <!-- End Search -->
 
@@ -158,108 +45,9 @@
       <!-- Topbar -->
       <div class="container header-hide-content pt-2">
         <div class="d-flex align-items-center">
-          <!-- Language -->
-          <!-- <div class="hs-unfold">
-            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;"
-               data-hs-unfold-options='{
-                "target": "#languageDropdown",
-                "type": "css-animation",
-                "event": "hover",
-                "hideOnScroll": "true"
-               }'>
-              <img class="dropdown-item-icon mr-2" src="https://htmlstream.com/preview/front-v3.2.2/assets/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG">
-              <span class="d-inline-block d-sm-none">US</span>
-              <span class="d-none d-sm-inline-block">United States</span>
-            </a>
-
-            <div id="languageDropdown" class="hs-unfold-content dropdown-menu">
-              <a class="dropdown-item active" href="#">English</a>
-              <a class="dropdown-item" href="#">Deutsch</a>
-              <a class="dropdown-item" href="#">Español‎</a>
-            </div>
-          </div> -->
-          <!-- End Language -->
-
-          <div class="ml-auto">
-            <!-- Jump To -->
-            <div class="hs-unfold d-sm-none mr-2">
-              <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center"
-                href="javascript:;" data-hs-unfold-options='{
-                  "target": "#jumpToDropdown",
-                  "type": "css-animation",
-                  "event": "hover",
-                  "hideOnScroll": "true"
-                 }'>
-                Jump to
-              </a>
-
-              <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
-                <a class="dropdown-item" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/faq.html">Help</a>
-                <a class="dropdown-item"
-                  href="https://htmlstream.com/preview/front-v3.2.2/html/pages/contacts-agency.html">Contacts</a>
-              </div>
-            </div>
-            <!-- End Jump To -->
-
-            <!-- Links -->
-            <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
-              <a class="nav-link" href="https://htmlstream.com/preview/front-v3.2.2/html/pages/faq.html">Help</a>
-              <a class="nav-link"
-                href="https://htmlstream.com/preview/front-v3.2.2/html/pages/contacts-agency.html">Contacts</a>
-            </div>
-            <!-- End Links -->
-          </div>
+          <div class="ml-auto"></div>
 
           <ul class="list-inline ml-2 mb-0">
-            <!-- Search -->
-            <li class="list-inline-item">
-              <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
-                  data-hs-unfold-options='{
-                    "target": "#searchPushTop",
-                    "type": "jquery-slide",
-                    "contentSelector": ".search-push-top"
-                   }'>
-                  <i class="fas fa-search"></i>
-                </a>
-              </div>
-            </li>
-            <!-- End Search -->
-
-            <!-- Shopping Cart -->
-            <li class="list-inline-item">
-              <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
-                  data-hs-unfold-options='{
-                    "target": "#shoppingCartDropdown",
-                    "type": "css-animation",
-                    "event": "hover",
-                    "hideOnScroll": "true"
-                   }'>
-                  <i class="fas fa-shopping-cart"></i>
-                </a>
-
-                <div id="shoppingCartDropdown"
-                  class="hs-unfold-content dropdown-menu dropdown-menu-right dropdown-card text-center"
-                  style="min-width: 275px;">
-                  <div class="card">
-                    <div class="card-body">
-                      <figure class="max-w-9rem mx-auto mb-3">
-                        <img class="img-fluid"
-                          src="https://htmlstream.com/preview/front-v3.2.2/assets/svg/illustrations/empty-cart.svg"
-                          alt="SVG">
-                      </figure>
-                      <span class="d-block">Your cart is empty</span>
-                    </div>
-
-                    <div class="card-footer">
-                      <small>Free shipping on orders over <strong class="text-dark">$50</strong></small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <!-- End Shopping Cart -->
 
             <!-- Account Login -->
             <li class="list-inline-item">
@@ -287,7 +75,7 @@
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
-          <a class="navbar-brand" href="index.html" aria-label="Front">
+          <a class="navbar-brand" href="/" aria-label="Front">
             <img src="{{ asset('img/mockups/memdal.png') }}">
           </a>
           <!-- End Logo -->
@@ -333,7 +121,7 @@
                   <!-- Home - Mega Menu -->
                   <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="homeMegaMenu">
                     <div class="row no-gutters">
-                      <div class="col-lg-5">
+                      <div class="col-lg-4">
                         <!-- Banner Image -->
                         <div class="navbar-banner" style="background-image: url({{ asset('img/750x750/img1.jpg') }});">
                           <div class="navbar-banner-content">
@@ -351,7 +139,7 @@
 
                       <div class="col-lg-7">
                         <div class="row mega-menu-body">
-                          <div class="col-sm-6 mb-3 mb-sm-0">
+                          <div class="col-sm-4 mb-3 mb-sm-0">
                             <span class="d-block h5">Service Types</span>
                             <a class="dropdown-item" href="index.html">Mobile App Development</a>
                             <a class="dropdown-item" href="classic-analytics.html">Software Development</a>
@@ -368,25 +156,29 @@
                             <a class="dropdown-item" href="classic-consulting.html">Logo &amp; Identity Design</a>
                           </div>
 
-                          <div class="col-sm-6">
+                          <div class="col-sm-4">
                             <span class="d-block h5">Solutions</span>
                             <div class="mb-3">
                               <a class="dropdown-item" href="app-ui-kit.html">Data Analytics</a>
                               <a class="dropdown-item" href="app-saas.html">Web Portals</a>
-                              <a class="dropdown-item" href="app-workflow.html">Fleet Management</a>
-                              <a class="dropdown-item" href="app-workflow.html">E-commerce Management Systems</a>
-                              <a class="dropdown-item" href="app-workflow.html">CRM</a>
+                              <a class="dropdown-item" href="app-workflow.html">Fleet Management Engine</a>
+                              <a class="dropdown-item" href="app-workflow.html">Hotel Booking Engine</a>
+                              <a class="dropdown-item" href="app-workflow.html">E-Commerce System</a>
                             </div>
-
+                          </div>
+                          <div class="col-sm-3">
                             <span class="d-block h5">Technologies</span>
                             <a class="dropdown-item" href="classic-advertisement.html" target="_blank">PHP
                               <span class="badge badge-danger badge-pill ml-2">Laravel</span>
                             </a>
                             <a class="dropdown-item" href="app-workflow.html">JavaScript <span class="badge badge-danger badge-pill ml-2">VUE JS</span></a>
                             <a class="dropdown-item" href="app-workflow.html">.NET</a>
+                            <a class="dropdown-item" href="app-workflow.html">Microsoft Azure</a>
                             <a class="dropdown-item" href="app-workflow.html">HTML 5</a>
-                            <a class="dropdown-item" href="app-workflow.html">CSS <span class="badge badge-danger badge-pill ml-2">Tailwind</span></a>
+                            <a class="dropdown-item" href="app-workflow.html">AWS</a>
                             <a class="dropdown-item" href="app-workflow.html">Bootstrap 4</a>
+                            <a class="dropdown-item" href="app-workflow.html">MySQL</a>
+                            <a class="dropdown-item" href="app-workflow.html">GitHub</a>
                           </div>
                         </div>
                       </div>
@@ -408,7 +200,7 @@
                     <div>
                       <a class="hs-mega-menu-invoker dropdown-item "
                         href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="navSubmenuPagesAccount">E-commerce Management System
+                        aria-controls="navSubmenuPagesAccount">E-commerce Management Engine
                       </a>
                     </div>
                     <!-- Account -->
@@ -425,7 +217,7 @@
                     <div>
                       <a id="navLinkPagesPortfolio" class="hs-mega-menu-invoker dropdown-item"
                         href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="navSubmenuPagesPortfolio">Hotel Management System</a>
+                        aria-controls="navSubmenuPagesPortfolio">Hotel Booking Engine</a>
                     </div>
                     <!-- Hotel Management System -->
 
@@ -433,7 +225,7 @@
                     <div>
                       <a id="navLinkPagesLogin" class="hs-mega-menu-invoker dropdown-item"
                         href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="navSubmenuPagesLogin">CRM For Properties</a>
+                        aria-controls="navSubmenuPagesLogin">POS Engine</a>
                     </div>
                     <!-- CRM -->
 
@@ -558,8 +350,8 @@
             <ul class="nav nav-sm nav-x-0 nav-white flex-column">
               <li class="nav-item"><a class="nav-link" href="#">Account &amp; Inventory System</a></li>
               <li class="nav-item"><a class="nav-link" href="#">E-Commerce Management System</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Hotel Management System</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">CRM</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Hotel Booking Engine</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">POS Engine</a></li>
             </ul>
             <!-- End Nav Link -->
           </div>
@@ -929,6 +721,7 @@
   <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- JS Implementing Plugins -->
+  <script src="{{ asset('vendor/slick-carousel/slick/slick.js') }}"></script>
   <script src="{{ asset('vendor/hs-header/dist/hs-header.min.js') }}"></script>
   <script src="{{ asset('vendor/hs-go-to/dist/hs-go-to.min.js') }}"></script>
   <script src="{{ asset('vendor/hs-unfold/dist/hs-unfold.min.js') }}"></script>
@@ -945,6 +738,7 @@
 
   <!-- JS Front -->
   <script src="{{ asset('js/hs.core.js') }}"></script>
+  <script src="{{ asset('js/hs.slick-carousel.js') }}"></script>
   <script src="{{ asset('js/hs.validation.js') }}"></script>
   <script src="{{ asset('js/hs.cubeportfolio.js') }}"></script>
 
@@ -963,6 +757,11 @@
 
       // initialization of unfold
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+       // initialization of slick carousel
+      $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
 
       // initialization of text animation (typing)
       var typed = new Typed(".js-text-animation", {
