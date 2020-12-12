@@ -232,8 +232,330 @@
     </div>
     <!-- End Clients Section -->
 
+    <!-- Features Section -->
+    <div class="container space-2 space-lg-2">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-1 mb-md-9">
+        <h2>Exploring our Offering</h2>
+      </div>
+      <!-- End Title -->
+
+      <!-- Nav -->
+      <div class="tab-slider">
+          <div class="text-center">
+        <ul class="nav nav-segment nav-pills scrollbar-horizontal mb-4" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-one-code-features-tab" data-toggle="pill" href="#pills-one-code-features" role="tab" aria-controls="pills-one-code-features" aria-selected="true">Software Development</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-two-code-features-tab" data-toggle="pill" href="#pills-two-code-features" role="tab" aria-controls="pills-two-code-features" aria-selected="false">IT Consulting</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-three-code-features-tab" data-toggle="pill" href="#pills-three-code-features" role="tab" aria-controls="pills-three-code-features" aria-selected="false">UI &amp; UX Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-four-code-features-tab" data-toggle="pill" href="#pills-four-code-features" role="tab" aria-controls="pills-four-code-features" aria-selected="false">Application Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-five-code-features-tab" data-toggle="pill" href="#pills-five-code-features" role="tab" aria-controls="pills-five-code-features" aria-selected="false">Help Desk Services</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Nav -->
+
+      <!-- Tab Content -->
+      <div class="tab-content pr-lg-4">
+        <div class="tab-pane fade show active" id="pills-one-code-features" role="tabpanel" aria-labelledby="pills-one-code-features-tab">
+          <!-- Device Mockup -->
+          <div class="device-wrapper">
+            <h2>Software Development</h2>
+
+            <p>The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.</p>
+
+            <div class="col-md-5 mb-5 mb-md-0">
+                <!-- Features -->
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Software consulting
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Software Product Development
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Custom Software Development
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Team augmentation
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Software Development Outsourcing
+                    </div>
+                </div>
+                <!-- End Features -->
+            </div>
+            <a class="btn btn-link btn-wide" href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+          </div>
+          <!-- End Device Mockup -->
+        </div>
+
+        <div class="tab-pane fade" id="pills-two-code-features" role="tabpanel" aria-labelledby="pills-two-code-features-tab">
+          <!-- Device Mockup -->
+          <div class="device-wrapper">
+            <div class="device">
+                <h2>IT Consulting</h2>
+
+                <p>Our experts can help to develop and implement an effective IT strategy, assist in smooth digital transformation and system integration as well as advise on improvements to your digital customer experience.</p>
+
+                <div class="col-md-7 mb-5 mb-md-0">
+                <!-- Features -->
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Digital Transformation Consulting
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Project Management Consulting
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    IT Service Management Consulting
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Platform Consulting
+                    </div>
+                </div>
+                <div class="media mb-2">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Enterprise IT Consulting
+                    </div>
+                </div>
+                <!-- End Features -->
+            </div>
+            <a class="btn btn-link btn-wide" href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+            </div>
+          </div>
+          <!-- End Device Mockup -->
+        </div>
+
+        <div class="tab-pane fade" id="pills-three-code-features" role="tabpanel" aria-labelledby="pills-three-code-features-tab">
+          <!-- Device Mockup -->
+          <div class="device-wrapper">
+            <div class="device">
+              <h2>UI &amp; UX Design</h2>
+
+              <p>User experience and user interface design for all types of websites, SaaS, and web/mobile apps. We combine the latest UI/UX trends with our customers’ individual goals and needs to deliver intuitive, vibrant, and impactful designs that power up businesses.</p>
+
+              <div class="col-md-5 mb-7 mb-md-0">
+                <!-- Features -->
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    User Interface (UI) Design
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Software-as-as-Service (SaaS) UI Design
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Responsive Web App Design
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Website Redesign
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    User Experience (UX) Design
+                    </div>
+                </div>
+                <!-- End Features -->
+
+            </div>
+            <a class="btn btn-link btn-wide" href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+            </div>
+          </div>
+          <!-- End Device Mockup -->
+        </div>
+
+        <div class="tab-pane fade" id="pills-four-code-features" role="tabpanel" aria-labelledby="pills-four-code-features-tab">
+          <!-- Device Mockup -->
+          <div class="device-wrapper">
+            <div class="device">
+                <h2>Application Services</h2>
+
+                <p>The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.</p>
+
+                <div class="col-md-7 mb-4 mb-md-0">
+                <!-- Features -->
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Application Management
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Application Integration
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Application Development
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Application maintainance and support
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Application Mordernization
+                    </div>
+                </div>
+                <!-- End Features -->
+
+            </div>
+            <a class="btn btn-link btn-wide" href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+            </div>
+          </div>
+          <!-- End Device Mockup -->
+        </div>
+
+        <div class="tab-pane fade" id="pills-five-code-features" role="tabpanel" aria-labelledby="pills-five-code-features-tab">
+          <!-- Device Mockup -->
+          <div class="device-wrapper">
+            <div class="device">
+                <h2>Help Desk Services</h2>
+
+                <p>Help desk services for your IT environment or software products. We take on solving diverse issues from answering application functionality questions to performing fixes and enhancements on the code level for improved adoption of software, its smooth functioning and increased end user satisfaction.</p>
+
+                <div class="col-md-5 mb-7 mb-md-0">
+                <!-- Features -->
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Help Desk Outsourcing
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    IT help desk services
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    Outsourced help desk for MSP
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <div class="media-body text-dark">
+                    NOC Outsourcing
+                    </div>
+                </div>
+                <!-- End Features -->
+
+            </div>
+            <a class="btn btn-link btn-wide" href="javascript:;">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+            </div>
+          </div>
+          <!-- End Device Mockup -->
+        </div>
+
+      </div>
+      </div>
+      <!-- End Tab Content -->
+    </div>
+    <!-- End Features Section -->
+
     <!-- Team Section -->
-    <div class="container space-2 space-lg-3">
+    <div class="container space-2 space-lg-2">
       <!-- Title -->
       <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
         <span class="d-block small font-weight-bold text-cap mb-2">Our team</span>

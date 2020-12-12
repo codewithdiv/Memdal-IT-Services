@@ -4499,6 +4499,28 @@ input[type="button"].btn-block {
   display: block;
 }
 
+.tab-slider {
+    box-shadow: 3px 2px 6px #8b8b8b;
+    padding: 3rem 0px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+@media(min-width: 768px){
+    .tab-slider{
+        height: 40rem;
+    }
+}
+
+@media (max-width: 768px){
+    .tab-slider{
+        height: 55rem;
+    }
+}
+
 .navbar {
   position: relative;
   display: -ms-flexbox;
@@ -19942,6 +19964,8 @@ label.btn {
 
 .device-wrapper {
   position: relative;
+  width: 70%;
+  margin: 0px auto;
 }
 
 .device-wrapper .device-iphone-x {
@@ -23910,89 +23934,6 @@ a:hover .text-hover-primary {
   100% {
     opacity: 1;
   }
-}
-
-.hero{
-    width: 80%;
-    height: 450px;
-    position: relative;
-    margin: 100px auto;
-    box-shadow: 3px 2px 3px rgb(197, 197, 197);
-}
-
-.btn-box{
-    display: flex;
-    border-bottom: 1px solid #ccc;
-    background: #bb2129;
-    color: #fff;
-    padding: 1rem 1rem;
-}
-
-.btn-box button {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 7px 7px;
-    margin-right: 20px;
-    font-size: 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5% auto;
-    position: absolute;
-    transform: translateX(110%);
-    -webkit-transform: translateX(110%);
-    -moz-transform: translateX(110%);
-    -ms-transform: translateX(110%);
-    -o-transform: translateX(110%);
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-}
-
-.content-left {
-    flex-basis: 90%;
-    /* width: 80% !important; */
-}
-
-.content-left p {
-    font-size: 17px;
-    padding: 30px 0;
-}
-
-.content-left a{
-    width: 150px;
-    padding: 8px 5px;
-    display: block;
-    border-radius: 20px;
-    text-decoration: none;
-    background-color: #bb2129;
-    color: #fff;
-    text-align: center;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-#content1{
-    transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    -o-transform: translateX(0px);
 }
 
 /* #btn1{
